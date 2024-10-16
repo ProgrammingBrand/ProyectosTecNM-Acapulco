@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    main {
+        flex: 1;
+        padding: 1rem;
+    }
+
+    footer {
+        padding: auto;
+    }
+}
+
+.row {
+    color: #fff;
+    background-color: #333333;
+    padding: auto;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.Lrow {
+    display: flex;
+    align-items: center;
+}
+
+.Lrow ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+}
+
+.Lrow ul li {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.Rrow {
+    text-align: right;
+    margin-right: 10px;
+}
