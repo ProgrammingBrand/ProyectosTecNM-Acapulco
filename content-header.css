@@ -1,8 +1,0 @@
-h3 {
-    grid-column: span 3;
-    font-size: 18px;
-    color: #333;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
