@@ -1,0 +1,208 @@
+h3 {
+    grid-column: span 3;
+    font-size: 18px;
+    color: #333;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #e7e5e5;/* Color de Header de TODAS LOS ENCABEZADOS DEL SISTEMA*/
+    color: #000;/* Color de Letras de TODAS LOS ENCABEZADOS DEL SISTEMA*/
+    padding: 0 20px;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;/* Color de Fondo de TODAS LOS FORMULARIOS DEL SISTEMA*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor principal */
+.manage-control {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general de las pestañas */
+ul[role="tablist"] {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+}
+
+ul[role="tablist"] li {
+    margin: 0;
+}
+
+ul[role="tablist"] li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+ul[role="tablist"] li a:hover {
+    background-color: #ddd;
+}
+
+ul[role="tablist"] li a[aria-selected="true"] {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+ul[role="tablist"] li a[aria-selected="false"] {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para el contenido de las pestañas */
+#myTabContent > div {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#myTabContent > div[role="tabpanel"].active {
+    display: block;
+}
+
+/* Estilo para el formulario de inserción */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de la tabla para consultar y modificar alumnos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+table td button {
+    background-color: #ffc107;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #e0a800;
+}
+
+table td button:active {
+    background-color: #d39e00;
+}
+
+/* Estilo para el formulario de edición (oculto por defecto) */
+#editForm {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#editForm h3 {
+    margin-bottom: 20px;
+}
+
+#editForm input, #editForm select {
+    margin-bottom: 10px;
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+    .manage-control {
+        padding: 15px;
+    }
+
+    ul[role="tablist"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input, form select {
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

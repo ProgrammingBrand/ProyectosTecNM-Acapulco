@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+
+    main {
+        display: flex;
+    }
+
+    footer {
+        display: block;
+        unicode-bidi: isolate;
+        padding: auto;
+        margin-top: auto;
+    }
+}
+html, body {
+    height: 100%; /* Asegura que el body y el html ocupen toda la altura */
+}

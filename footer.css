@@ -1,0 +1,35 @@
+.site-footer {
+    grid-area: app-footer;
+    width: inherit;
+    max-width: 100vw;
+    min-height: 3rem;
+    padding: 1rem;
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    background-color: #333;/* Color de Pie de pagina de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    border-top: 1px solid #ddd;/* Color de borde superior de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    transition: all 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;/* Color de Pie de pagina de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA*/
+    max-width: 100vw;
+}
+
+.footer-left a {
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA Lado izquierdo*/
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right strong {
+    color: #fff;/* Color de Letras de TODAS LOS PIE DE PAGINA DEL SISTEMA Lado Derecho*/
+}
