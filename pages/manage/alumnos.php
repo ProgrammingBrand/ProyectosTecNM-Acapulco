@@ -373,10 +373,10 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Actualizar Alumno" class="submit-btn" />
+                                    <input type="submit" value="Actualizar Alumno" name="btnModificarAlumno" class="submit-btn" />
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Eliminar -->
                     <div id="delete" role="tabpanel" aria-labelledby="delete-tab" class="tab-panel">
