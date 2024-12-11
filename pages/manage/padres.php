@@ -12,18 +12,18 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/src/styles/sidebar.css" />
-  <link rel="stylesheet" href="/src/styles/footer.css">
-  <link rel="stylesheet" href="/src/styles/styles.css">
-  <link rel="stylesheet" href="/src/styles/m-students.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/sidebar.css" />
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="stylesheet" href="/src/styles/m-students.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title></title>
 </head>
 
 <body>
-<main class="main">
+    <main class="main">
         <aside class="sidebar">
             <nav>
                 <ul>
@@ -35,8 +35,8 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                             <i class='bx bx-book-open'></i>
                             <span class="link-submenu">Gestion</span></a>
                         <ul class="submenu">
-                            <li><a class="sidebar-button" data-page="alta-alumnos.html">Alumnos</a></li>
-                            <li><a class="sidebar-button" data-page="alta-padres.html">Padres</a></li>
+                            <li><a class="sidebar-button" href="/pages/manage/alumnos.php">Alumnos</a></li>
+                            <li><a class="sidebar-button" href="/pages/manage/padres.php">Padres</a></li>
                             <!--<li><a href="#">Opcion</a></li>-->
                             <!--<li><a href="#">Opcion</a></li>-->
                         </ul>
@@ -169,7 +169,7 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
 
                                 <div class="form-group">
                                     <label for="anio">Año</label>
-                                    <input type="text" class="form-control" name="anio" placeholder="2XXX"/>
+                                    <input type="text" class="form-control" name="anio" placeholder="2XXX" />
                                 </div>
 
                                 <!-- RFC -->
@@ -182,23 +182,25 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                                 <div class="form-group">
                                     <label for="regimen">Regimen fiscal</label>
                                     <select name="regimen" id="nivel" class="form-input">
-                                    <option selected>Elige alguna opcion</option>
-                                                <option>Sueldos y Salarios e Ingresos Asimilados a Salarios</option>
-                                                <option>Simplificado de Confianza</option>
-                                                <option>Persona Física con Actividad Empresarial</option>
+                                        <option selected>Elige alguna opcion</option>
+                                        <option>Sueldos y Salarios e Ingresos Asimilados a Salarios</option>
+                                        <option>Simplificado de Confianza</option>
+                                        <option>Persona Física con Actividad Empresarial</option>
                                     </select>
                                 </div>
 
                                 <!-- Direccion -->
                                 <div class="form-group">
                                     <label for="grado">Direccion</label>
-                                    <input type="text" name="direccion" id="direccion" class="form-input" placeholder="Ingresa tu codigo postal" />
+                                    <input type="text" name="direccion" id="direccion" class="form-input"
+                                        placeholder="Ingresa tu codigo postal" />
                                 </div>
 
                                 <!-- Codigo postal -->
                                 <div class="form-group">
                                     <label for="rfc">Codigo postal</label>
-                                    <input type="text" name="cp" id="cp" class="form-input" placeholder="Ingresa tu codigo postal" />
+                                    <input type="text" name="cp" id="cp" class="form-input"
+                                        placeholder="Ingresa tu codigo postal" />
                                 </div>
 
                                 <div class="form-group">
@@ -214,19 +216,17 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                         <div class="table-container">
                             <table class="student-table">
                                 <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido Paterno</th>
-                                    <th>Apellido Materno</th>
-                                    <th>Dirección</th>
-                                    <th>CP</th>
-                                    <th>Fecha de nacimiento</th>
-                                    <th>RFC</th>
-                                    <th>Regimen fiscal</th>
-                                    <!-- <th>Matricula</th> -->
-                                    <th>Accion</th>
-                                </tr>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Dirección</th>
+                                        <th>CP</th>
+                                        <th>Fecha de nacimiento</th>
+                                        <th>RFC</th>
+                                        <th>Regimen fiscal</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <?php
@@ -235,22 +235,41 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
 
                         while ($row = mysqli_fetch_assoc($result_tasks)) { ?>
                                     <tr>
-                                    <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['Nombre']; ?></td>
-                                    <td><?php echo $row['ApellidoP']; ?></td>
-                                    <td><?php echo $row['ApellidoM']; ?></td>
-                                    <td><?php echo $row['Direccion']; ?></td>
-                                    <td><?php echo $row['CP']; ?></td>
-                                    <td><?php echo $row['Edad']; ?></td>
-                                    <td><?php echo $row['RFC']; ?></td>
-                                    <td><?php echo $row['RegimenFiscal']; ?></td>
-                                    <!-- <td><?php echo $row['Matricula']; ?></td> -->
-                                </tr>
+                                        <td>
+                                            <?php echo $row['id']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['Nombre']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['ApellidoP']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['ApellidoM']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['Direccion']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['CP']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['FechaN']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['RFC']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['RegimenFiscal']; ?>
+                                        </td>
+                                        <!-- <td><?php echo $row['Matricula']; ?></td> -->
+                                    </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                    
                     <!-- Modificar -->
                     <div id="modify" role="tabpanel" aria-labelledby="modify-tab" class="tab-panel">
                         <h3>Modificar informacion de alumnos</h3>
@@ -258,18 +277,18 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                             <table class="student-table">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido Paterno</th>
-                                    <th>Apellido Materno</th>
-                                    <th>Direccion</th>
-                                    <th>CP</th>
-                                    <th>Fecha de nacimiento</th>
-                                    <th>RFC</th>
-                                    <th>Regimen fiscal</th>
-                                    <!-- <th>Matricula</th> -->
-                                    <th>Accion</th>
-                                </tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Dirección</th>
+                                        <th>CP</th>
+                                        <th>Fecha de nacimiento</th>
+                                        <th>RFC</th>
+                                        <th>Regimen fiscal</th>
+                                        <!-- <th>Matricula</th> -->
+                                        <th>Accion</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <?php
@@ -278,26 +297,97 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
 
                         while ($row = mysqli_fetch_assoc($result_tasks)) { ?>
                                     <tr>
-                                    <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['Nombre']; ?></td>
-                                    <td><?php echo $row['ApellidoP']; ?></td>
-                                    <td><?php echo $row['ApellidoM']; ?></td>
-                                    <td><?php echo $row['Direccion']; ?></td>
-                                    <td><?php echo $row['CP']; ?></td>
-                                    <td><?php echo $row['Edad']; ?></td>
-                                    <td><?php echo $row['RFC']; ?></td>
-                                    <td><?php echo $row['RegimenFiscal']; ?></td>
-                                    <td>
-                                        <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
-                                            Modificar
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <?php echo $row['id']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['Nombre']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['ApellidoP']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['ApellidoM']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['Direccion']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['CP']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['FechaN']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['RFC']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['RegimenFiscal']; ?>
+                                        </td>
+                                        <td>
+                                            <button
+                                                onclick="showForm('<?php echo $row['id']; ?>', '<?php echo $row['Nombre']; ?>', '<?php echo $row['ApellidoP']; ?>', '<?php echo $row['ApellidoM']; ?>', '<?php echo $row['Direccion']; ?>', '<?php echo $row['CP']; ?>', '<?php echo $row['FechaN']; ?>', '<?php echo $row['RFC']; ?>', '<?php echo $row['RegimenFiscal']; ?>')"
+                                                class="modify-btn">
+                                                Modificar
+                                            </button>
+                                        </td>
+                                    </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
                         </div>
+
+                        <!-- Formulario oculto -->
+                        <div id="editForm" class="edit-form">
+                            <h3>Editar Alumno</h3>
+                            <form method="POST" class="student-form">
+                                <input type="hidden" name="id" id="form-id" />
+                                <div class="form-group">
+                                    <label for="form-nombre">Nombre</label>
+                                    <input type="text" id="form-nombre" name="nombre" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-apellidoP">Apellido Paterno</label>
+                                    <input type="text" id="form-apellidoP" name="apellidoP" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-apellidoM">Apellido Materno</label>
+                                    <input type="text" id="form-apellidoM" name="apellidoM" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-fechaN">Edad:</label>
+                                    <input type="text" id="form-fechaN" name="fechaN" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-curp">CURP</label>
+                                    <input type="text" id="form-curp" name="curp" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-nivel">Nivel educativo</label>
+                                    <select name="nivel" id="form-nivel" class="form-input">
+                                        <option value="Preescolar">Preescolar</option>
+                                        <option value="Primaria">Primaria</option>
+                                        <option value="Secundaria">Secundaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-grado">Grado</label>
+                                    <select name="grado" id="form-grado" class="form-input">
+                                        <option>1ro</option>
+                                        <option>2do</option>
+                                        <option>3ro</option>
+                                        <option>4to</option>
+                                        <option>5to</option>
+                                        <option>6to</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Actualizar Alumno" name="btnModificarAlumno" class="submit-btn" />
+                                </div>
+                            </form>
+                        </div>
                     </div>
+
                     <!-- Eliminar -->
                     <div id="delete" role="tabpanel" aria-labelledby="delete-tab" class="tab-panel">
                         <h3>Eliminar alumno</h3>
@@ -318,17 +408,19 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
         </section>
     </main>
 
-  <footer class="footer">
-    <div class="footer-left">
-      <a href="#">Acerca de</a>
-      <a href="#">Política de Privacidad</a>
-      <a href="/pages/faq/contact-us.php">Contáctenos</a>
-    </div>
-    <div class="footer-right">
-      <strong>&copy; 2024 Instituto Hispanoamericano Méxicano</strong>
-    </div>
-  </footer>
-  <script src="/src/script/tables.js"></script>
-  </body>
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="#">Acerca de</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="/pages/faq/contact-us.php">Contáctenos</a>
+        </div>
+        <div class="footer-right">
+            <strong>&copy; 2024 Instituto Hispanoamericano Méxicano</strong>
+        </div>
+    </footer>
+    <script src="/pages/manage/script/show.js"></script>
+    <script src="/src/script/tables.js"></script>
+    <script src="/src/script/sidebar.js"></script>
+</body>
 
 </html>

@@ -44,8 +44,8 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                 <span class="link-submenu">Administrativos</span></a>
               <ul class="submenu">
                 <!--<li><a href="#">pagos</a></li,>-->
-                <li><a class="sidebar-button" data-page="pagos.html">Pagos</a></li>
-                <li><a class="sidebar-button" data-page="alta-Registros.html">Registros</a></li>
+                <li><a class="sidebar-button" href="/pages/payments/main-payments.php">Pagos</a></li>
+                <li><a class="sidebar-button" href="#">Registros</a></li>
                 <!--<li><a href="#">Registros</a></li>-->
                 <!--<li><a href="#">OPcion</a></li>-->
                 <!--<li><a href="#">Opcion</a></li>-->
@@ -93,6 +93,6 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
         <strong>&copy; 2024 Instituto Hispanoamericano Méxicano</strong>
       </div>
     </footer>
-    <script src="/src/javascript/main.js"></script>
+    <script src="/src/script/sidebar.js"></script>
   </body>
 </html>

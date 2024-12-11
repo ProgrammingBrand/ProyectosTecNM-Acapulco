@@ -35,8 +35,8 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                             <i class='bx bx-book-open'></i>
                             <span class="link-submenu">Gestion</span></a>
                         <ul class="submenu">
-                            <li><a class="sidebar-button" data-page="alta-alumnos.html">Alumnos</a></li>
-                            <li><a class="sidebar-button" data-page="alta-padres.html">Padres</a></li>
+                        <li><a class="sidebar-button" href="/pages/manage/alumnos.php">Alumnos</a></li>
+                        <li><a class="sidebar-button" href="/pages/manage/padres.php">Padres</a></li>
                             <!--<li><a href="#">Opcion</a></li>-->
                             <!--<li><a href="#">Opcion</a></li>-->
                         </ul>
@@ -376,7 +376,7 @@ $rol = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'Rol no encontra
                                     <input type="submit" value="Actualizar Alumno" name="btnModificarAlumno" class="submit-btn" />
                                 </div>
                             </form>
-                        </div> -->
+                        </div>
                     </div>
                     <!-- Eliminar -->
                     <div id="delete" role="tabpanel" aria-labelledby="delete-tab" class="tab-panel">
@@ -429,6 +429,7 @@ function hideForm() {
 }
 </script>
     <script src="/src/script/tables.js"></script>
+    <script src="/src/script/sidebar.js"></script>
 </body>
 
 </html>

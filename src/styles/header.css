@@ -1,0 +1,18 @@
+h3 {
+    grid-column: span 3;
+    font-size: 18px;
+    color: #333;/* Color de Letras de TODAS LOS FORMULARIOS DEL SISTEMA*/
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #e7e5e5;/* Color de Header de TODAS LOS ENCABEZADOS DEL SISTEMA*/
+    color: #000;/* Color de Letras de TODAS LOS ENCABEZADOS DEL SISTEMA*/
+    padding: 0 20px;
+}
